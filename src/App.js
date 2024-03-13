@@ -5,6 +5,7 @@ import {
   Route,
   Switch,
 } from "react-router-dom/cjs/react-router-dom.min";
+import Create from "./create";
 
 function App() {
   // #3. we create a dynamic value in ths 'const' give it a title and retuen it in the curly brackets.
@@ -16,8 +17,11 @@ function App() {
         {/* #19. This is were our page content will go when to go to different pages */}
         <div className="content">
           <Switch>
-            <Route path="/">   {/* show the home page when user visits an empty path of  "/" */}
+            <Route exact path="/">
               <Home />
+            </Route>
+            <Route path="/create">
+              <Create />
             </Route>
           </Switch>
         </div>
