@@ -49,3 +49,21 @@
 .blog-preview a{
   text-decoration: none;
 }
+
+/* .blog-details */
+.blog-details h2 {
+  font-size: 20px;
+color:#00ffff;
+margin-bottom: 10px;
+}
+.blog-details div {
+  margin: 20px 0;
+}
+/* .blog-details button {
+  background: #00ffff;
+  color: #ffff;
+  border: 0;
+  padding: 8px;
+  border-radius: 8px;
+  cursor: pointer;
+} */
