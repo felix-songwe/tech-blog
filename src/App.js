@@ -1,12 +1,12 @@
 import Navbar from "./navbar";
 import Home from "./home";
+import Create from "./create";
+import BlogDetails from "./blogDetails";
 import {
   BrowserRouter as Router,
   Route,
-  Switch,
-} from "react-router-dom/cjs/react-router-dom.min";
-import Create from "./create";
-import BlogDetails from "./blogDetails";
+  Routes,
+} from "react-router-dom";
 
 function App() {
   // #3. we create a dynamic value in ths 'const' give it a title and retuen it in the curly brackets.
@@ -17,17 +17,11 @@ function App() {
         <Navbar />
         {/* #19. This is were our page content will go when to go to different pages */}
         <div className="content">
-          <Switch>
-            <Route exact path="/">
-              <Home />
-            </Route>
-            <Route path="/create">
-              <Create />
-            </Route>
-            <Route path="/blogs/:id">
-              <BlogDetails />
-            </Route>
-          </Switch>
+          <Routes>
+            <Route path="/" element={ < Home /> } />
+            <Route path="/create" element={ < Create /> } />
+            <Route path="/blogs/:id" element={ < BlogDetails /> } />
+          </Routes>
         </div>
       </div>
     </Router>
