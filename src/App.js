@@ -6,6 +6,7 @@ import {
   Switch,
 } from "react-router-dom/cjs/react-router-dom.min";
 import Create from "./create";
+import BlogDetails from "./blogDetails";
 
 function App() {
   // #3. we create a dynamic value in ths 'const' give it a title and retuen it in the curly brackets.
@@ -22,6 +23,9 @@ function App() {
             </Route>
             <Route path="/create">
               <Create />
+            </Route>
+            <Route path="/blogs/:id">
+              <BlogDetails />
             </Route>
           </Switch>
         </div>
